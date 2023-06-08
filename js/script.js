@@ -38,6 +38,8 @@ function loaded() {
 	btn0.addEventListener('click', () => {
 		if (display.innerHTML !== '0') {
 			display.innerHTML += btn0.innerHTML;
+			opc='';
+			ope=true;
 		}
 	});
 	
@@ -51,8 +53,9 @@ function loaded() {
 		ope=true;
 	});
 	
-	btnPlus.addEventListener('click', () => {
+	btnPlus.addEventListener('click', () => { // button '+'
 		opc = '+';
+		lopc = opc;
 		if (ope) {
 			lope = parseFloat(display.innerHTML);
 			dat += lope;
@@ -62,21 +65,19 @@ function loaded() {
 	});
 	
 	btnEqual.addEventListener('click', () => {
-		/*
-		switch (opc) {
-			case '':
+		switch (lopc) {
+			case '+':
 				dat += lope;	
-				display = dat;
-				display.innerHTML = display;
+				display.innerHTML = dat;
 				
-		}*/
-		dat += lope;	
-		display.innerHTML = dat;
+		}
 	});
 	
 	btnC.addEventListener('click', () => {
 		opc = '';
+		lopc = '';
 		ope = false;
+		lope = 0; 
 		dat = 0;
 		display.innerHTML = '0';
 	});
