@@ -65,6 +65,10 @@ function loaded() {
 	});
 	
 	btnEqual.addEventListener('click', () => {
+		if (ope) {
+			lope = parseFloat(display.innerHTML);
+			ope=false;
+		}
 		switch (lopc) {
 			case '+':
 				dat += lope;	
