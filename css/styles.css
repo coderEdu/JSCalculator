@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(181, 181, 181);
+}
+
+.container {
+    position: relative;
+    display: block;
+    width: 360px;
+    height: auto;
+    margin: 30px auto;
+    background-color: transparent;
+}
+
+.frame {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 10px 0px;
+    border: 2px rgb(179, 169, 169) solid;
+    border-bottom: 4px rgb(179, 169, 169) solid;
+    border-radius: 15px;
+    background-color: rgb(208, 216, 223);
+}
+
+.display {
+    display: block;
+    width: 85%;
+    min-height: 55px;
+    padding: 8px 5px;
+    margin: 45px auto 15px auto;
+    border-top: 3px rgb(166, 166, 166) solid;
+    border-right: 2px rgb(166, 166, 166) solid;
+    border-bottom: 1px rgb(166, 166, 166) solid;
+    border-left: 2px rgb(166, 166, 166) solid;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 3.5em;
+    text-align: right;
+    color: rgb(213, 221, 220, 0.99);
+    background-color: rgba(213, 221, 220, 0.99);
+}
+
+.btn-cont {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 87.5%;
+    height: auto;
+    margin: 20px auto;
+    border: 2px rgb(75, 114, 137) solid;
+    border-top: 3px rgb(75, 114, 137) solid;
+    border-radius: 3px;
+    padding: 0px;
+    background-color: rgb(170, 184, 193);
+}
+
+.btn-cont-ctn1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-cont-ctn2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ctn2-ctn1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ctn2-ctn2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    display: block;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    width: 57px;
+    height: 50px;
+    margin: 3px;
+    border-top: 0px rgb(104, 104, 104) solid;
+    border-right: 2px rgb(104, 104, 104) solid;
+    border-bottom: 3px rgb(104, 104, 104) solid;
+    border-left: 2px rgb(104, 104, 104) solid;
+    border-radius: 5px;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.btn0 {
+    width: 120px;
+}
+
+#btnRetro, 
+#btnPlusMinus, 
+#btnSqrt, 
+#btnSlash, 
+#btnStar, 
+#btnMinus, 
+#btnPlus, 
+#btnEqual {
+    font-weight: 700;
+}
+
+#btnOnOff {
+    font-size: medium;
+    font-weight: 700;
+    color: brown;
+}
+
+.btnEqual {
+    height: 106px;
+}
