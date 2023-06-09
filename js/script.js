@@ -1,21 +1,13 @@
 function loaded() {
     let on = false;
+	let ope = false;
+	let nope = false;
 	let opc = '';
 	let lopc = '';
-	let ope = false;
 	let lope = 0;
 	let dat = 0;
 	let display = document.getElementById('display');
 	let btn0 = document.getElementById('btn0');
-	let btn1 = document.getElementById('btn1');
-	let btn2 = document.getElementById('btn2');
-	let btn3 = document.getElementById('btn3');
-	let btn4 = document.getElementById('btn4');
-	let btn5 = document.getElementById('btn5');
-	let btn6 = document.getElementById('btn6');
-	let btn7 = document.getElementById('btn7');
-	let btn8 = document.getElementById('btn8');
-	let btn9 = document.getElementById('btn9');
 	let btnPlus = document.getElementById('btnPlus');
 	let btnEqual = document.getElementById('btnEqual');
 	let btnC = document.getElementById('btnC');
@@ -60,6 +52,7 @@ function loaded() {
 	btnPlus.addEventListener('click', () => { // button '+'
 		opc = '+';
 		lopc = opc;
+		nope = false;
 		if (ope) {
 			lope = parseFloat(display.innerHTML);
 			dat += lope;
@@ -73,6 +66,10 @@ function loaded() {
 		if (ope) {
 			lope = parseFloat(display.innerHTML);
 			ope=false;
+		}
+		if (!nope) {
+			lope = parseFloat(display.innerHTML);
+			nope = true;
 		}
 		switch (lopc) {
 			case '+':
@@ -94,5 +91,3 @@ function loaded() {
 }; // end function loaded
 
 window.addEventListener('load',loaded);
-
-//let counter=0;
