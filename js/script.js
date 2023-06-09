@@ -43,14 +43,18 @@ function loaded() {
 		}
 	});
 	
-	btn1.addEventListener('click', () => {
-		if (display.innerHTML === '0' || opc!=='') {
-			display.innerHTML = btn1.innerHTML;
-			opc='';
-		} else {
-			display.innerHTML += btn1.innerHTML;
-		}
-		ope=true;
+	// digits
+	document.querySelectorAll('.bt').forEach(occurence => {
+		let digit = occurence;
+		occurence.addEventListener('click', function() { 
+			if (display.innerHTML === '0' || opc!=='') {
+				display.innerHTML = digit.innerHTML;
+				opc='';
+			} else {
+				display.innerHTML += digit.innerHTML;
+			}
+			ope=true;		
+		});
 	});
 	
 	btnPlus.addEventListener('click', () => { // button '+'
@@ -64,7 +68,8 @@ function loaded() {
 		}
 	});
 	
-	btnEqual.addEventListener('click', () => {
+	btnEqual.addEventListener('click', () => { // button '='
+		opc = '';
 		if (ope) {
 			lope = parseFloat(display.innerHTML);
 			ope=false;
