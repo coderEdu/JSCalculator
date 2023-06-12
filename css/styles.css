@@ -31,9 +31,9 @@ body {
 .display {
     display: block;
     width: 85%;
-    min-height: 55px;
+    min-height: 100px;
     padding: 8px 5px;
-    margin: 45px auto 15px auto;
+    margin: 60px auto 15px auto;
     border-top: 3px rgb(166, 166, 166) solid;
     border-right: 2px rgb(166, 166, 166) solid;
     border-bottom: 1px rgb(166, 166, 166) solid;
@@ -44,6 +44,19 @@ body {
     text-align: right;
     color: rgb(213, 221, 220, 0.99);
     background-color: rgba(213, 221, 220, 0.99);
+}
+
+.monitor {
+	display: block;
+	width: 98%;
+	min-height: 30px;
+	padding: 8px 2px;
+	font-family: Arial;
+	font-size: 16px;
+}
+
+.mline {
+    
 }
 
 .btn-cont {
