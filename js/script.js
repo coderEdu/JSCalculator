@@ -42,7 +42,10 @@ function loaded() {
 	document.querySelectorAll('.bt').forEach(occurence => {
 		let digit = occurence;
 		occurence.addEventListener('click', function() { 
-			if (opc=='=') monitor.innerHTML = '';
+			if (monitor.innerHTML.endsWith('=')){
+				monitor.innerHTML = '';
+			}
+			//if (opc=='=') monitor.innerHTML = '';
 			if (mline.innerHTML === '0' || opc!=='' || opc=='=') {
 				mline.innerHTML = digit.innerHTML;
 				opc='';
@@ -73,6 +76,9 @@ function loaded() {
 				monitor.innerHTML += mline.innerHTML + operation.innerHTML;
 				ope=false;			
 			}		
+			if (monitor.innerHTML.endsWith('=')){
+				monitor.innerHTML = mline.innerHTML + operation.innerHTML;
+			}
 		});
 	});
 	
