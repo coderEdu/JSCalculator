@@ -31,28 +31,34 @@ body {
 .display {
     display: block;
     width: 85%;
-    min-height: 100px;
-    padding: 8px 5px;
+    min-height: 90px;
+    padding: 12px 5px 0px 5px;
     margin: 60px auto 15px auto;
     border-top: 3px rgb(166, 166, 166) solid;
     border-right: 2px rgb(166, 166, 166) solid;
     border-bottom: 1px rgb(166, 166, 166) solid;
     border-left: 2px rgb(166, 166, 166) solid;
     border-radius: 5px;
-    font-family: monospace;
-    font-size: 3.5em;
-    text-align: right;
-    color: rgb(213, 221, 220, 0.99);
     background-color: rgba(213, 221, 220, 0.99);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow: hidden;
 }
 
 .monitor {
 	display: block;
 	width: 98%;
-	min-height: 30px;
-	padding: 8px 2px;
+	min-height: 20px;
+	padding: 10px 2px 0px 2px;
 	font-family: Arial;
 	font-size: 16px;
+    font-weight: 300;
+    text-align: right;
+}
+
+.mline {
+    font-size: 2.7em;
+    text-align: right;
+    color: rgb(213, 221, 220, 0.99);
 }
 
 .btn-cont {
@@ -134,9 +140,26 @@ body {
 }
 
 #btnOnOff {
+    position: relative;
     font-size: medium;
     font-weight: 700;
-    color: brown;
+    color: black;
+}
+
+.indicator {
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    width: 6px;
+    height: 6px;
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 50%;
+    background-color: rgb(47, 47, 47);
+}
+
+.indicator-on {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 87%, rgba(255,0,0,1) 100%);
 }
 
 .btnEqual {

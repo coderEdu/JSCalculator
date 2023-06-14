@@ -6,21 +6,27 @@ function loaded() {
 	let lopc = '';
 	let lope = 0;
 	let dat = 0;
+	let btnOn = document.getElementById('btnOnOff');
 	let btn0 = document.getElementById('btn0');
+	let indicator = document.getElementById('indicator');
 	let btnPlus = document.getElementById('btnPlus');
 	let btnEqual = document.getElementById('btnEqual');
 	let monitor = document.getElementById('monitor');
 	let mline = document.getElementById('mline');
 	let btnC = document.getElementById('btnC');
 	
-    document.getElementById('btnOnOff').addEventListener('click', () => {
-        if (!on) {
+    btnOn.addEventListener('click', () => {
+        if (!on) {	// turning on calculator
+			//indicator.style.backgroundColor = 'rgb(255, 132, 0)';
+			indicator.classList.add('indicator-on');
 			monitor.style.color= 'black';
             mline.style.color = 'black';
 			mline.disabled = false;
 			mline.innerHTML = '0';
             on=true;
         } else {
+			//indicator.style.backgroundColor = 'black';
+			indicator.classList.remove('indicator-on');
             mline.style.color = 'rgb(213, 221, 220, 0.99)';
 			mline.innerHTML = '';
 			dat = 0;
@@ -117,10 +123,11 @@ function loaded() {
 		monitor.innerHTML
 		let expr = monitor.innerHTML;
 		monitor.innerHTML += opc;
-		mline.innerHTML = eval( expr );
+		mline.innerHTML = parseFloat(eval( expr ));
 	});
 	
 	btnC.addEventListener('click', () => {
+		//alert('idiota');
 		opc = '';
 		lopc = '';
 		ope = false;
