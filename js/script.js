@@ -80,6 +80,10 @@ function loaded() {
 				//mline.innerHTML = dat;
 				//monitor.innerHTML = dat + opc;
 				monitor.innerHTML += mline.innerHTML + operation.innerHTML;
+				const mon = monitor.innerHTML;
+				const editedMonitor = mon.slice(0, -1);
+				//alert(parseFloat(eval( editedMonitor )));
+				mline.innerHTML = parseFloat(eval( editedMonitor ));
 				ope=false;			
 			}		
 			if (monitor.innerHTML.endsWith('=')){
